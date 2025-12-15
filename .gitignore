@@ -209,3 +209,7 @@ __marimo__/
 # Other
 markdown/capstone.md
 
+# Ignore data folder and large files
+/data/
+*.zip
+

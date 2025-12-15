@@ -42,15 +42,6 @@ git push -u origin main
       It contains information like image file paths, bounding box coordinates, and class labels, which are essential for training object detection models.
 2. Begin exploratory data analysis (EDA) using Jupyter Notebook/Colab.
 
-### Commands Executed
-```sh
-unzip archive.zip -d /workspaces/ppe-compliance-detection
-file /workspaces/ppe-compliance-detection/data/labels/train.cache
-hexdump -C /workspaces/ppe-compliance-detection/data/labels/train.cache | head -n 20
-
-python ./inspect-cashe.py > data/train-cashe.txt
-```
-
 ## Session 2: December 15, 2025
 
 ### Progress Made
@@ -66,6 +57,17 @@ python ./inspect-cashe.py > data/train-cashe.txt
 ### Dataset Handling
 - Organized dataset into `data/train`, `data/val`, and `data/test` directories.
 - Implemented data generators for training, validation, and testing with augmentation for training data.
+
+### Commands Executed
+```sh
+unzip archive.zip -d /workspaces/ppe-compliance-detection
+file /workspaces/ppe-compliance-detection/data/labels/train.cache
+hexdump -C /workspaces/ppe-compliance-detection/data/labels/train.cache | head -n 20
+
+python ./inspect-cashe.py > data/train-cashe.txt
+
+git add -A
+```
 
 ### Next Steps
 1. Upload the notebook to Google Colab for GPU training.
