@@ -34,29 +34,25 @@ git push -u origin main
 ### Next Steps
 1. Acquire a suitable PPE dataset and organize it into `data/train`, `data/val`, and `data/test` directories:
 `https://www.kaggle.com/datasets/ketakichalke/ppe-kit-detection-construction-site-workers/data`
-3. The train.cache/val.cache files likely serve as preprocessed caches for the datasets. Its purpose is to:
+2. The train.cache/val.cache files likely serve as preprocessed caches for the datasets. Its purpose is to:
 
    - **Speed Up Data Loading**:
       Instead of reloading and preprocessing raw data (e.g., parsing annotations, resizing images) every time the training script runs, the cache provides preprocessed data ready for use.
    - **Store Metadata**:
       It contains information like image file paths, bounding box coordinates, and class labels, which are essential for training object detection models.
-2. Begin exploratory data analysis (EDA) using Jupyter Notebook/Colab.
+3. Begin exploratory data analysis (EDA) using Jupyter Notebook/Colab.
 
 ## Session 2: December 15, 2025
 
 ### Progress Made
 - **Notebook Structure**:
   - Added sections for Data Preparation, EDA, Model Definition, Training, Evaluation, and Deployment.
-  - Implemented data loading, augmentation, and normalization.
-  - Visualized class distribution and image dimensions in the EDA section.
+  - Implemented data generators for data loading, augmentation, and normalization.
+  - Added class distribution and image dimensions visualization in the EDA section.
   - Defined a transfer learning model using MobileNetV2 with custom classification layers.
   - Added training with callbacks (early stopping and model checkpointing).
-  - Evaluated the model on the test set and visualized training history.
-  - Exported the trained model as `ppe_compliance_model.h5`.
-
-### Dataset Handling
-- Organized dataset into `data/train`, `data/val`, and `data/test` directories.
-- Implemented data generators for training, validation, and testing with augmentation for training data.
+  - Added model evaluation on the test set and training history visualization.
+  - Added the trained model export as `ppe_compliance_model.h5`.
 
 ### Commands Executed
 ```sh
@@ -67,6 +63,7 @@ hexdump -C /workspaces/ppe-compliance-detection/data/labels/train.cache | head -
 python ./inspect-cashe.py > data/train-cashe.txt
 
 git add -A
+git push origin main
 ```
 
 ### Next Steps

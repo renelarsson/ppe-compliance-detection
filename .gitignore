@@ -207,9 +207,10 @@ marimo/_lsp/
 __marimo__/
 
 # Other
-markdown/capstone.md
-
-# Ignore data folder and large files
+/markdown/
+/workshops/
+/notebooks/08_dll_torch_to_TF.ipynb
+/notebooks/08-deep-learning.ipynb
 /data/
 *.zip
 
