@@ -213,6 +213,5 @@ __marimo__/
 /notebooks/08-deep-learning.ipynb
 /notebooks/08-dll-TF.ipynb
 /data/
-/scripts/inspect-cache.py
 *.zip
 

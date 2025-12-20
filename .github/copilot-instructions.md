@@ -1,7 +1,7 @@
-# Copilot Instructions for PPE Compliance Detection
+# Copilot Instructions for Chest X-Ray Pneumonia
 
 ## Project Overview
-This repository focuses on detecting Personal Protective Equipment (PPE) compliance using computer vision techniques. The project involves training models to identify whether individuals in images are wearing required safety gear (e.g., helmets, vests, gloves). The workflow includes data preprocessing, model training, evaluation, and deployment as a web service.
+This repository focuses on detecting pneumonia in chest X-ray images using computer vision techniques. The project involves training models to classify X-ray images as either pneumonia-positive or pneumonia-negative. The workflow includes data preprocessing, model training, evaluation, and deployment as a web service.
 
 ## Repository Structure
 - **`markdown/`**: Contains project documentation, tips, and criteria.
@@ -31,14 +31,14 @@ This repository focuses on detecting Personal Protective Equipment (PPE) complia
 ### 4. Deployment
 - Deploy locally using Docker:
   ```bash
-  docker build -t ppe-compliance .
-  docker run -it -p 9696:9696 ppe-compliance
+  docker build -t chest-xray-pneumonia .
+  docker run -it -p 9696:9696 chest-xray-pneumonia
   ```
 - Optionally deploy to cloud platforms (e.g., AWS, GCP).
 
 ## Project-Specific Conventions
-- **Model Input**: Images resized to 224x224 pixels, normalized to [0, 1].
-- **Model Output**: JSON object with detection scores and labels.
+- **Model Input**: X-ray images resized to 224x224 pixels, normalized to [0, 1].
+- **Model Output**: JSON object with classification scores and labels.
 - **Dependencies**: Managed using `pyproject.toml` and `uv`.
 - **Dockerization**: Use `python:3.13-slim` as the base image.
 
